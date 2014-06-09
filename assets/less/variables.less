@@ -1,0 +1,103 @@
+/* =============================================================================
+   Fonts
+   ========================================================================== */
+
+@font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:             Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:         Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@font-family-lato:              "Lato",             @font-family-sans-serif;
+@font-family-open-sans:         "Open Sans",             @font-family-sans-serif;
+@font-family-raleway:           "Raleway",          @font-family-sans-serif;
+@font-family-josefin-slab:      "Josefin Slab",     @font-family-sans-serif;
+@font-family-ubuntu:            "Ubuntu",           @font-family-sans-serif;
+@font-family-quicksand:         "Quicksand",        @font-family-sans-serif;
+@font-family-roboto:            "Roboto",           @font-family-sans-serif;
+@font-family-roboto-condensed:  "Roboto Condensed", @font-family-sans-serif;
+@font-family-roboto-slab:       "Roboto Slab",      @font-family-serif;
+@font-family-inconsolata:       "Inconsolata",      @font-family-monospace;
+
+@font-family-base:              @font-family-lato;
+
+/* =============================================================================
+   Common
+   ========================================================================== */
+
+@container-padding:             (@grid-gutter-width / 2);
+
+/* =============================================================================
+   Font weights
+   ========================================================================== */
+
+@font-weight-light:             300;
+@font-weight-normal:            400;
+@font-weight-bold:              700;
+@font-weight-bolder:            900;
+
+@font-weight-base:              @font-weight-light;
+
+
+/* =============================================================================
+   Colors
+   ========================================================================== */
+
+@color-pink:                    #f8306a;
+@color-orange:                  #fb5b40;
+
+@color-home-bg1:                @color-pink;
+@color-home-bg2:                @color-orange;
+@color-home-bg-fallback:        @color-home-bg2;
+@color-home-text:               #fff;
+
+@color-spektrum-bg1:            #1a1c1e;
+@color-spektrum-bg2:            #2a2c2e;
+@color-spektrum-bg-fallback:    #2a2c2e;
+@color-spektrum-text:           #eee;
+@color-spektrum-highlight:      @color-orange;
+
+// @color-portfolio-bg1:           desaturate( darken( @color-pink, 40% ), 20% );
+// @color-portfolio-bg2:           #111214;
+@color-portfolio-bg2:           #00080a;
+@color-portfolio-bg1:           desaturate( lighten( @color-portfolio-bg2, 13% ), 80% );
+@color-portfolio-bg-fallback:   desaturate( @color-portfolio-bg2, 80% );
+@color-portfolio-text:          #fff;
+
+@color-contact-bg:              #D6CEC4;
+@color-contact-bg1:             lighten( @color-contact-bg, 5% );
+@color-contact-bg2:             darken( @color-contact-bg, 25% );
+@color-contact-bg-fallback:     @color-contact-bg;
+@color-contact-text:            #000;
+
+@color-footer-bg:               #111214;
+@color-footer-text:             #848588;
+
+/* =============================================================================
+   Portfolio
+   ========================================================================== */
+
+@portfolio-item-size:           250px;
+@portfolio-item-size-active:    440px;
+@portfolio-item-margin:         5%;
+@portfolio-img-size:            600px;
+
+@portfolio-active-duration:     .2s;
+@portfolio-active-easing:       ease-in-out;
+
+@portfolio-index-margin-top:    100px;
+@portfolio-index-margin-bottom: 120px;
+
+@portfolio-close-size:          32px;
+
+
+/* =============================================================================
+   Slider
+   ========================================================================== */
+
+@slider-indicator-size:         10px;
+@slider-indicator-margin:       10px;
+@slider-indicator-color:        #fff;
+
+@slider-nav-margin-top:         9px;
+@slider-nav-margin-horizontal:  5%;
+@slider-nav-size:               20px;
+

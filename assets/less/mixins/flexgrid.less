@@ -1,0 +1,45 @@
+/* =============================================================================
+   Grid using inline-block, justify, flexbox
+   ========================================================================== */
+
+.flexgrid( @columns-count: 4, @gutter-width: 10px ) {
+    display: block;
+    margin: 0 (-@gutter-width / 2);
+    padding: 0;
+    text-align: justify;
+    font-size: 0;
+    line-height: 0;
+
+    > .item,
+    > .gap {
+        display: inline-block;
+        width: unit((100 / @columns-count), %);
+    }
+
+    > .item {
+        position: relative;
+        text-align: left;
+        font-size: @font-size-base;
+        line-height: @line-height-base;
+        padding: (@gutter-width / 2);
+        vertical-align: top;
+
+        > .inner {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+    }
+
+    > .gap {
+
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
+}

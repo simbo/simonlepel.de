@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>loading dots</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M175,125 C188.807119,125 200,113.807119 200,100 C200,86.1928806 188.807119,75 175,75 C161.192881,75 150,86.1928806 150,100 C150,113.807119 161.192881,125 175,125 Z" id="5%" fill-opacity="0.05" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M152,73 C165.807119,73 177,61.8071194 177,48 C177,34.1928806 165.807119,23 152,23 C138.192881,23 127,34.1928806 127,48 C127,61.8071194 138.192881,73 152,73 Z" id="5%-copy" fill-opacity="0.05" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M100,50 C113.807119,50 125,38.8071194 125,25 C125,11.1928806 113.807119,0 100,0 C86.1928806,0 75,11.1928806 75,25 C75,38.8071194 86.1928806,50 100,50 Z" id="5%-copy-2" fill-opacity="0.05" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M48,73 C61.8071194,73 73,61.8071194 73,48 C73,34.1928806 61.8071194,23 48,23 C34.1928806,23 23,34.1928806 23,48 C23,61.8071194 34.1928806,73 48,73 Z" id="5%-copy-3" fill-opacity="0.05" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M152,176 C165.807119,176 177,164.807119 177,151 C177,137.192881 165.807119,126 152,126 C138.192881,126 127,137.192881 127,151 C127,164.807119 138.192881,176 152,176 Z" id="25%" fill-opacity="0.25" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M100,200 C113.807119,200 125,188.807119 125,175 C125,161.192881 113.807119,150 100,150 C86.1928806,150 75,161.192881 75,175 C75,188.807119 86.1928806,200 100,200 Z" id="50%" fill-opacity="0.5" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M48,177 C61.8071194,177 73,165.807119 73,152 C73,138.192881 61.8071194,127 48,127 C34.1928806,127 23,138.192881 23,152 C23,165.807119 34.1928806,177 48,177 Z" id="75%" fill-opacity="0.75" fill="#000000" sketch:type="MSShapeGroup"></path>
+        <path d="M25,125 C38.8071194,125 50,113.807119 50,100 C50,86.1928806 38.8071194,75 25,75 C11.1928806,75 0,86.1928806 0,100 C0,113.807119 11.1928806,125 25,125 Z" id="100%" fill="#000000" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

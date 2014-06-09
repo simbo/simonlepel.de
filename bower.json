@@ -1,0 +1,31 @@
+{
+	"name": "simonlepel-de",
+	"version": "1.0.0",
+	"authors": [
+		"Simon Lepel <hallo@simonlepel.de>"
+	],
+	"homepage": "http://visiocollect.com",
+	"description": "SimonLepel.de Wordpress Theme",
+	"main": "style.css",
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"node_modules",
+		"bower_components",
+		".DS_Store?",
+		"._*",
+		".Spotlight-V100",
+		".Trashes",
+		"ehthumbs.db",
+		"Thumbs.db"
+	],
+	"devDependencies": {
+		"jquery": "1.11.0",
+		"bootstrap": "latest",
+		"roots": "roots/roots#latest",
+		"font-awesome": "latest",
+		"Custom-Metaboxes-and-Fields-for-WordPress": "WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress#latest",
+		"jquery-easing-original": "latest",
+		"jquery-hoverIntent": "*"
+	}
+}

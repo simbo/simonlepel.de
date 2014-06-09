@@ -1,0 +1,349 @@
+/* =============================================================================
+   Typography Basics
+   ========================================================================== */
+
+body {
+    font-weight: @font-weight-base;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+}
+
+strong {
+    font-weight: @font-weight-bold;
+}
+
+a {
+    outline: none;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+::selection {
+    background: #FECB2F;
+    color: #000;
+    text-shadow: 0px 1px 2px fade(#000,20%);
+}
+
+object body {
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    font-weight: @font-weight-base;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+    color: #000;
+}
+
+/* =============================================================================
+   Warning: old browser, no js
+   ========================================================================== */
+
+.old-browser {
+    border-radius: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.no-js body {
+
+    &:before {
+        content: 'Dein Browser benötigt Javascript Unterstützung für diese Website.';
+        display: block;
+        .alert;
+        .alert-danger;
+        .old-browser;
+    }
+
+}
+
+/* =============================================================================
+   Tooltips
+   ========================================================================== */
+
+@tooltip-margin: 15px;
+
+.tooltip {
+    &.top    { margin-top:  -@tooltip-margin; }
+    &.right  { margin-left:  @tooltip-margin; }
+    &.bottom { margin-top:   @tooltip-margin; }
+    &.left   { margin-left: -@tooltip-margin; }
+}
+
+/* =============================================================================
+   Sociallinks icon list
+   ========================================================================== */
+
+.sociallinks-list {
+    @icon-size: 25px;
+    position: relative;
+    padding: 0;
+    margin: (-@icon-size / 2) (-@icon-size / 2) 0 (-@icon-size / 2);
+    list-style: none;
+    font-size: @icon-size;
+    .clearfix;
+
+    > li {
+        display: block;
+        float: left;
+        padding: (@icon-size / 2);
+        line-height: 1;
+
+        > a {
+            display: inline-block;
+            text-align: center;
+            transform: scale(1);
+            .ui-transition(transform);
+
+            &:hover {
+                transform: scale(2);
+            }
+
+            &,
+            > .fa {
+                width: 1em;
+                height: 1em;
+                line-height: 1;
+            }
+
+        }
+
+    }
+
+}
+
+/* =============================================================================
+   Edit entry button
+   ========================================================================== */
+
+.entry-edit {
+    position: absolute;
+    top: @container-padding;
+    right: @container-padding;
+}
+
+/* =============================================================================
+   Main sections
+   ========================================================================== */
+
+main > section {
+    position: relative;
+    overflow: hidden;
+
+    > .container {
+        margin-bottom: 0;
+        padding: 60px (@grid-gutter-width / 2);
+
+        h2 {
+            margin: 0 0 40px 0;
+            font-weight: 900;
+            font-size: 48px;
+        }
+
+        h3 {
+            margin: 40px 0 20px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+    }
+
+}
+
+/* =============================================================================
+   Centered grid column
+   ========================================================================== */
+
+.col-center {
+    margin: 0 auto;
+    float: none;
+}
+
+/* =============================================================================
+   Centered grid column, narrow
+   ========================================================================== */
+
+.col-center-narrow {
+    .col-center;
+    width: auto;
+    max-width: 340px;
+    padding: 0 (@grid-gutter-width / 2);
+}
+
+
+/* =============================================================================
+   Buttons "scroll up/down"
+   ========================================================================== */
+
+.btn-scroll-size( @size: 45px ) {
+    margin-left: (-@size / 2);
+    height: @size;
+    padding: 0 ((@size - @font-size-base) / 2 );
+    line-height: @size;
+    font-size: (@size * .75);
+}
+
+.btn-scroll {
+    .btn-scroll-size();
+    display: inline-block;
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    background: transparent;
+    transform: scale(1);
+    .ui-transition(transform);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.5);
+    }
+
+    &.down {
+        bottom: 10px;
+    }
+
+    &.up {
+        top: 10px;
+    }
+
+    &.large {
+        .btn-scroll-size( 60px );
+    }
+
+}
+
+/* ==========================================================================
+   Loading Indicator
+   ========================================================================== */
+
+.loading-indicator {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: top;
+    font-size: @input-height-base;
+    line-height: 1em;
+    background-size: .65em .65em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    &,
+    &.black {
+        background-image: data-uri('../img/loading-dots-black.svg');
+    }
+
+    &.white {
+        background-image: data-uri('../img/loading-dots-white.svg');
+    }
+
+    .loading & {
+        opacity: .65;
+        animation: step-spin 1s linear infinite;
+    }
+
+}
+
+/* =============================================================================
+   Horizontal text navigation
+   ========================================================================== */
+
+.list-nav-line {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        + li:before {
+                content: '\2014';
+                display: inline-block;
+                padding: 0 .5em;
+        }
+    }
+}
+
+/* =============================================================================
+   Site footer
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    background: @color-footer-bg;
+    padding: 80px 0 60px 0;
+    .color(@color-footer-text);
+
+    &.fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding-top: 60px;
+
+        .btn-scroll {
+            display: none;
+        }
+    }
+
+    > nav {
+        font-size: .8em;
+        text-align: center;
+    }
+
+}
+
+/* =============================================================================
+   Show github repo
+   ========================================================================== */
+
+.showcode {
+    text-align: center;
+
+    blockquote {
+        font-style: italic;
+        padding: 0;
+        margin: 0 0 15px 0;
+        font-size: .8em;
+        border: none;
+
+        &:before {
+            content: '\007e';
+            display: block;
+            margin: 10px 0;
+            line-height: 30px;
+            font-size: 25px;
+            font-weight: @font-weight-light;
+            opacity: .5;
+            padding-left: .4em;
+        }
+
+        p {
+            margin: 0;
+
+            &:before {
+                content: '\00bb';
+                padding-right: .2em;
+            }
+
+            &:after {
+                content: '\00ab';
+                padding-left: .2em;
+            }
+
+        }
+
+        cite {
+            font-style: normal;
+            opacity: .65;
+            display: block;
+        }
+
+    }
+
+}

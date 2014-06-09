@@ -1,0 +1,34 @@
+{
+  "name": "simonlepel-de",
+  "version": "1.0.0",
+  "description": "SimonLepel.de Wordpress Theme",
+  "homepage": "http://simonlepel.de",
+  "keywords": [
+  ],
+  "author": {
+    "name": "Simon Lepel",
+    "email": "hallo@simonlepel.de",
+    "url": "http://simonlepel.de"
+  },
+  "license": {
+    "type": "GPL"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "load-grunt-tasks": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-update-json": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-less": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-notify": "*",
+    "grunt-wp-assets": "*",
+    "bower": "*"
+  }
+}

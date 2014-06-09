@@ -1,0 +1,2 @@
+SimonLepel.de WordPress Theme
+=============================

@@ -1,0 +1,112 @@
+/* =============================================================================
+   Form Elements
+   ========================================================================== */
+
+// default font weight
+label,
+.checkbox label,
+.radio label {
+    font-weight: @font-weight-base;
+}
+
+// remove shadow from inputs
+.form-control {
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+// smaller help blocks
+.help-block {
+    font-size: .8em;
+}
+
+// checkbox replacement
+.checkbox-replacement {
+    @size: 1.3em;
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: @size;
+    line-height: @line-height-base;
+
+    .checkbox label & {
+        float: left;
+        margin-left: -20px;
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+
+    &:before {
+        content: @fa-var-square-o;
+    }
+
+    &.checked:before {
+        content: @fa-var-check-square-o;
+    }
+
+}
+
+// if supported, rely on placeholders, hide labels
+html.placeholder {
+
+    .form-group {
+
+        label {
+            display: none;
+        }
+
+        .checkbox, .radio {
+
+            label {
+                display: block;
+            }
+
+        }
+
+        &.has-feedback .form-control-feedback {
+
+            &.fa {
+                margin-top: (-@line-height-computed - 5px);
+            }
+
+        }
+
+    }
+
+}
+
+// full width textareas in columns
+.col textarea {
+    max-width: 100%;
+}
+
+form {
+
+    // change gutter width within form
+    @gutter: 15px;
+
+    .row {
+        margin-left: (-@gutter / 2);
+        margin-right: (-@gutter / 2);
+    }
+
+    .col {
+        padding-left: (@gutter / 2);
+        padding-right: (@gutter / 2);
+    }
+
+    // remove alert borders within form
+    .alert {
+        border-color: transparent;
+    }
+
+    // loading state indicator
+    .loading-indicator {
+        margin: 0 0 0 10px;
+    }
+
+}
+
+
+

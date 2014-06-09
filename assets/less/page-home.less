@@ -1,0 +1,423 @@
+/* =============================================================================
+   Frontpage styles
+   ========================================================================== */
+
+body.home {
+
+    /* =============================================================================
+       All sections
+       ========================================================================== */
+
+    section {
+
+        h2 {
+            font-size: 54px;
+        }
+
+        /* =============================================================================
+           Section: Home / Welcome
+           ========================================================================== */
+
+        &#home {
+            background-color: @color-home-bg1;
+            text-shadow: 0px 1px 2px fade(#000,33%);
+            #gradient > .vertical( @color-home-bg1, @color-home-bg2, 0, 400px);
+            .color( @color-home-text );
+
+            > .container {
+                padding: 0 ;
+                position: relative;
+                @space-offset: 40px;
+                .screen({
+                    @space-xs: 100px;
+                    padding: @space-xs @container-padding ( @space-xs - @space-offset / 2 ) @container-padding;
+                },{
+                    @space-sm: 140px;
+                    padding: @space-sm @container-padding ( @space-sm + @space-offset ) @container-padding;
+                },{
+                    @space-md: 180px;
+                    padding: @space-md @container-padding ( @space-md + @space-offset ) @container-padding;
+                },{
+                    @space-lg: 220px;
+                    padding: @space-lg @container-padding ( @space-lg + @space-offset ) @container-padding;
+                });
+            }
+
+            p {
+                font-weight: @font-weight-bolder;
+                font-size: 60px;
+            }
+
+            p + p {
+                font-weight: @font-weight-base;
+                font-size: 24px;
+                margin: 0;
+            }
+
+            figure {
+                @size: 200px;
+                width: @size;
+                height: @size;
+                top: 47%;
+                margin: (-@size / 2) 0 0 0;
+                .screen({
+                    @size: 120px;
+                    top:  @container-padding;
+                    right: @container-padding;
+                    width: @size;
+                    height: @size;
+                    margin-top: 0;
+                },{
+                    right: @container-padding;
+                },{
+                    right: 8%;
+                },{
+                    right: 12%;
+                });
+
+                &,
+                img,
+                &:after {
+                    border-radius: 50%;
+                    position: absolute;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0 0 5px fade(#000,75%) inset;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+        }
+
+        /* ==========================================================================
+           Section: Intro
+           ========================================================================== */
+
+        &#intro {
+            background: #666 url('../img/simbo-macbook.jpg') center center no-repeat;
+            background-size: cover;
+            box-shadow: 0 5px 10px -5px #000 inset,
+                0 -5px 10px -5px #000 inset;
+
+            > .container {
+                .screen({
+                    padding: 0;
+                },{
+                    padding: 60px @container-padding;
+                });
+            }
+
+            .col {
+                .screen({
+                    padding-top: 0;
+                },{
+                    @space-sm: 80px;
+                    padding-top: @space-sm;
+                    padding-bottom: (@space-sm / 2);
+                },{
+                    @space-md: 120px;
+                    padding-top: @space-md;
+                    padding-bottom: (@space-md / 2);
+                },{
+                    @space-lg: 160px;
+                    padding-top: @space-lg;
+                    padding-bottom: (@space-lg / 2);
+                });
+
+                .inner {
+                    color: #fff;
+                    border-radius: 2px;
+                    text-shadow: 0 0 2px fade(#000,100%);
+                    .screen({
+                        background: fade(#000,65%);
+                        padding: 25px @container-padding;
+                    },{
+                        background: fade(#000,80%);
+                        padding: 25px 30px;
+                    });
+
+                    .btn-list {
+                        text-align: center;
+                        margin-top: 2em;
+                        > .btn + .btn {
+                            .screen({
+                                margin-left: 1.5em;
+                            },{
+                                margin-left: 4em;
+                            },{
+                                margin-left: 5em;
+                            },{
+                                margin-left: 6em;
+                            });
+                        }
+                    }
+
+                }
+
+            }
+
+            .fa-apple {
+                .hidden-xs;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                color: fade(#fff,50%);
+                text-shadow: none;
+                cursor: help;
+                text-shadow: none;
+                font-size: 18px;
+                line-height: 1.5em;
+                width: 1.5em;
+                text-align: center;
+            }
+
+        }
+
+        /* ==========================================================================
+           Section: Spektrum
+           ========================================================================== */
+
+        &#spektrum {
+            background: @color-spektrum-bg-fallback;
+            #gradient > .vertical( @color-spektrum-bg1, @color-spektrum-bg2 );
+            color: @color-spektrum-text;
+            box-shadow: 0 -5px 10px -5px #000 inset;
+
+            > .container {
+                padding: 100px @container-padding;
+            }
+
+            .col {
+
+                h3 {
+                    margin: 0 0 48px 0;
+                    text-transform: uppercase;
+                    font-weight: @font-weight-bold;
+                    text-align: center;
+                    font-size: 28px;
+
+                    .fa {
+                        display: block;
+                        font-size: 44px;
+                        margin-bottom: 18px;
+                        color: @color-spektrum-highlight;
+                    }
+
+                }
+
+                strong {
+                    font-weight: @font-weight-base;
+                    color: @color-orange;
+                }
+
+                .screen-sm-max({
+                    & + .col {
+                        padding-top: 60px;
+                    }
+                });
+
+            }
+
+        }
+
+        /* ==========================================================================
+           Section: Projekte
+           ========================================================================== */
+
+        &#projekte {
+            background-color: @color-portfolio-bg-fallback;
+            #gradient > .radial( @color-portfolio-bg1, @color-portfolio-bg2 );
+            background-size: 100%;
+            background-attachment: fixed;
+            .color( @color-portfolio-text );
+            box-shadow: 0 -5px 10px -5px #000 inset;
+
+            h2 {
+                font-weight: @font-weight-bold;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 0;
+                color: fade( @color-portfolio-text, 100% );
+            }
+
+        }
+
+        /* =============================================================================
+           Section: Kontakt
+           ========================================================================== */
+
+        &#kontakt {
+            background-color: @color-contact-bg-fallback;
+            #gradient > .vertical(@color-contact-bg1, @color-contact-bg2);
+            .color( @color-contact-text );
+            box-shadow: 0 -5px 10px -5px #000 inset;
+
+            h2 {
+                margin: 0;
+                text-align: left;
+            }
+
+            > .container {
+
+                .screen({
+                    padding: 40px @container-padding 60px @container-padding;
+                },{
+                    padding: 60px @container-padding 80px @container-padding;
+                },{
+                    padding: 80px @container-padding 100px @container-padding;
+                });
+
+                > .row {
+                    > .col {
+                        margin-top: 40px;
+                    }
+                }
+
+            }
+
+            .form-contact {
+                padding: 40px 0 10px 0;
+
+                .checkbox {
+                    font-size: .8em;
+                }
+
+                .form-control {
+                    .placeholder( darken(@color-contact-bg1,10%) );
+                }
+
+            }
+
+            .vcard,
+            .btn,
+            .vcard-qrcode {
+                margin-bottom: 20px;
+            }
+
+            .vcard {
+                font-size: 18px;
+
+                .fn {
+                    font-weight: 700;
+                }
+
+                .n,
+                .photo,
+                .nickname {
+                    .hidden;
+                }
+
+                .fa {
+                    .fa-left;
+                }
+
+            }
+
+            @qrcode-size: 138px;
+            .vcard-qrcode {
+                width: @qrcode-size;
+                text-align: center;
+
+                .screen-sm-max({
+                    display: none;
+                });
+
+                .screen-md-min({
+                    display: block;
+                });
+
+                a {
+                    position: relative;
+                    display: block;
+                    width: @qrcode-size;
+                    height: @qrcode-size;
+
+                    img {
+                        width: @qrcode-size;
+                        height: @qrcode-size;
+                    }
+
+                    &:before {
+                        content: '';
+                        z-index: 1;
+                        position: absolute;
+                        display: block;
+                        top: -20%;
+                        left: -20%;
+                        background: transparent data-uri('../img/scanner.svg') 0 0 no-repeat;
+                        background-size: cover;
+                        width: 140%;
+                        height: 140%;
+                        opacity: 0;
+                        transform: scale(0);
+                        .ui-transition(opacity, transform);
+                    }
+
+                }
+
+                figcaption {
+                    margin-top: .6em;
+                    opacity: 1;
+                    .ui-transition(opacity);
+
+                    .fa {
+                        .fa-left;
+
+                        &:before {
+                            font-size: 1.5em;
+                            vertical-align: middle;
+                        }
+
+                    }
+
+                }
+
+                &:hover {
+
+                    a {
+
+                        &:before {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+
+                    }
+
+                    figcaption {
+                        opacity: 0;
+                    }
+
+                }
+
+            }
+
+            .sociallinks-list {
+                padding: 0 0 20px 0;
+
+                li {
+                    width: 24.25%;
+
+                    a {
+                        margin: 0 auto;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}

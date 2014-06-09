@@ -1,0 +1,49 @@
+/* =============================================================================
+   Default transition fpr ui elements
+   ========================================================================== */
+
+.ui-transition( ... ) {
+    -webkit-transform-style: preserve3d;
+    transition-timing-function: ease-in-out;
+    transition-delay: .1s;
+    transition-duration: .15s;
+    transition-property: ~`'@{arguments}'.replace(/(^\[)|(\]$)/g,'')`;
+}
+
+
+/* =============================================================================
+   Set text and link color at once
+   ========================================================================== */
+
+.color( @color ) {
+    &, a {
+        color: @color;
+    }
+}
+
+/* =============================================================================
+   FontAwesome icons left from text, all same width, margin to right
+   ========================================================================== */
+
+.fa-left {
+    width: 1em;
+    text-align: center;
+    margin-right: .4em;
+}
+
+/* =============================================================================
+   Set text to zero, with reset helper
+   ========================================================================== */
+
+.text-zero() {
+    font-family: a;
+    font-size: 0;
+    line-height: 0;
+}
+
+.text-reset( @em: 1 ) {
+    line-height: @line-height-base;
+    font-family: @font-family-base;
+    font-size: ( 1rem * @em );
+    font-weight: @font-weight-base;
+}

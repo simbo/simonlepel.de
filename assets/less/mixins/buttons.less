@@ -1,0 +1,92 @@
+/* =============================================================================
+   Button variant: "transparent"
+   ========================================================================== */
+
+.button-variant-transparent-default( @perc ) {
+    color: @color;
+    border-color: fade( @color, @perc );
+    background-color: fade( @color, 0% );
+    box-shadow: 0 0 0 fade( @color, 0% );
+}
+
+.button-variant-transparent-active( @perc ) {
+    color: @color;
+    border-color: fade( @color, 0% );
+    background-color: fade( @color, @perc );
+    box-shadow: 0 0 0 fade( @color, 0% );
+}
+
+.button-variant-transparent( @color, @perc_active: 20%, @perc_default: 65% ) {
+    font-weight: @font-weight-base;
+    white-space: normal;
+    .button-variant-transparent-default(@perc_default);
+    .ui-transition(border-color, background-color, box-shadow);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open .dropdown-toggle& {
+        .button-variant-transparent-active(@perc_active);
+    }
+
+    &,
+    &:active,
+    &.active {
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 fade( @color, 0% );
+        }
+    }
+
+    &:active,
+    &.active,
+    .open .dropdown-toggle& {
+        background-image: none;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            .button-variant-transparent-default(@perc_default);
+        }
+
+    }
+
+    .badge {
+        .button-variant-transparent-active(@perc_active);
+    }
+
+}
+
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-transparent-white {
+    .button-variant-transparent(#fff,20%);
+}
+
+.btn-transparent-black {
+    .button-variant-transparent(#000,10%);
+}
+
+.btn-transparent-gray {
+    .button-variant-transparent(#848588,15%);
+}
+
+.btn {
+
+    .fa {
+        .fa-left;
+    }
+
+}
+
+

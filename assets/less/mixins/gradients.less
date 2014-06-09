@@ -1,0 +1,44 @@
+/* =============================================================================
+   Gradients with unlimited color-stops (ready to use with Autoprefixer)
+   ========================================================================== */
+
+#gradient {
+
+    // Filter color-stop params
+    .color-stops(@color-stops-N...) {
+        @color-stops: ~`"@{arguments}".replace(/(^\[)|(\]$)/g,'')`;
+    }
+
+    // Creepy IE special treatment, fallback on first and last color-stop
+    .ie-filter(@color-stops, @type) {
+        filter: ~`(function(c,t){
+            var a = c[0].split(/\s+/)[0].trim(),
+                b = c.slice(-1)[0].trim().split(/\s+/)[0].trim();
+            return "progid:DXImageTransform.Microsoft.gradient(startColorstr='"+a+"', endColorstr='"+b+"', GradientType="+t+")";
+        })("@{color-stops}".split(','),@{type})`;
+    }
+
+    // Horizontal gradient, from left to right
+    .horiz(@color-stops-0: #555 0%, @color-stops-1: #333 100%, @color-stops-N...) {
+        .color-stops(@arguments);
+        background-image: linear-gradient(to right, @color-stops); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-repeat: repeat-x;
+        #gradient > .ie-filter(@color-stops; 1); // IE9 and down, gets no color-stop at all for proper fallback
+    }
+
+    // Vertical gradient, from top to bottom
+    .vert(@color-stops-0: #555 0%, @color-stops-1: #333 100%, @color-stops-N...) {
+        .color-stops(@arguments);
+        background-image: linear-gradient(to bottom, @color-stops); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-repeat: repeat-x;
+        #gradient > .ie-filter(@color-stops; 0); // IE9 and down, gets no color-stop at all for proper fallback
+    }
+
+    // Radial gradient
+    .rad(@color-stops-0: #555 0%, @color-stops-1: #333 100%, @color-stops-N...) {
+        .color-stops(@arguments);
+        background-image: radial-gradient(circle, @color-stops);
+        background-repeat: no-repeat;
+    }
+
+}
